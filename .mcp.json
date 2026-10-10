@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "code-review-graph": {
+      "command": "/Users/nikitanaumenko/.local/pipx/venvs/code-review-graph/bin/python",
+      "args": [
+        "-m",
+        "code_review_graph",
+        "serve"
+      ],
+      "cwd": "/Users/nikitanaumenko/Documents/Code/NodusAI",
+      "type": "stdio"
+    }
+  }
+}
