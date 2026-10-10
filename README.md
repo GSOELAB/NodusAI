@@ -1,3 +1,1 @@
-Это жоский проект
-писюн у меня велики
-jerbnkjfnbwekjgfnejkrnfjw
+Read me
