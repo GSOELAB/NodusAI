@@ -1,0 +1,41 @@
+{
+	"name": "nodus-ai",
+	"version": "0.0.1",
+	"description": "AI assistant for your Obsidian vault.",
+	"main": "main.js",
+	"type": "module",
+	"scripts": {
+		"dev": "node esbuild.config.mjs",
+		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+		"version": "node version-bump.mjs && git add manifest.json versions.json",
+		"lint": "eslint .",
+		"format": "prettier --write .",
+		"test": "vitest run"
+	},
+	"keywords": [],
+	"license": "0-BSD",
+	"dependencies": {
+		"ai": "^7.0.137",
+		"react": "^19.3.0",
+		"react-dom": "^19.3.0",
+		"react-router": "^8.4.0",
+		"zod": "^4.6.5",
+		"zustand": "^5.0.15"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.39.5",
+		"@types/node": "^26.6.5",
+		"@types/react": "^19.3.0",
+		"@types/react-dom": "^19.3.0",
+		"esbuild": "^0.28.2",
+		"eslint": "^9.39.5",
+		"eslint-plugin-obsidianmd": "^0.4.2",
+		"globals": "^17.13.0",
+		"jiti": "^2.7.0",
+		"obsidian": "^1.14.4",
+		"prettier": "^3.9.10",
+		"typescript": "~6.0.3",
+		"typescript-eslint": "^8.71.1",
+		"vitest": "^5.0.3"
+	}
+}
