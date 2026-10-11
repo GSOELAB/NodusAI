@@ -1,0 +1,13 @@
+/* src/ui/components/Nav.module.css */
+.Nav_nav {
+  display: flex;
+  gap: var(--size-4-3);
+}
+
+/* src/ui/App.module.css */
+.App_app {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-4-2);
+}
+/*# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsic3JjL3VpL2NvbXBvbmVudHMvTmF2Lm1vZHVsZS5jc3MiLCAic3JjL3VpL0FwcC5tb2R1bGUuY3NzIl0sCiAgInNvdXJjZXNDb250ZW50IjogWyIubmF2IHtcblx0ZGlzcGxheTogZmxleDtcblx0Z2FwOiB2YXIoLS1zaXplLTQtMyk7XG59XG4iLCAiLmFwcCB7XG5cdGRpc3BsYXk6IGZsZXg7XG5cdGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG5cdGdhcDogdmFyKC0tc2l6ZS00LTIpO1xufVxuIl0sCiAgIm1hcHBpbmdzIjogIjtBQUFBLENBQUNBO0FBQ0EsV0FBUztBQUNULE9BQUssSUFBSTtBQUNWOzs7QUNIQSxDQUFDQztBQUNBLFdBQVM7QUFDVCxrQkFBZ0I7QUFDaEIsT0FBSyxJQUFJO0FBQ1Y7IiwKICAibmFtZXMiOiBbIm5hdiIsICJhcHAiXQp9Cg== */
