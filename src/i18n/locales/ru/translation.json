@@ -1,0 +1,21 @@
+{
+	"navigation": {
+		"chat": "Чат",
+		"settings": "Настройки"
+	},
+	"pages": {
+		"chat": {
+			"title": "Чат"
+		},
+		"settings": {
+			"title": "Настройки"
+		}
+	},
+	"plugin": {
+		"openView": "Открыть окно",
+		"openNodusAI": "Открыть Nodus AI"
+	},
+	"view": {
+		"displayName": "Nodus AI"
+	}
+}

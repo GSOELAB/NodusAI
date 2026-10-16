@@ -1,23 +1,25 @@
 import { Plugin, WorkspaceLeaf } from 'obsidian';
 import { NodusSettingTab } from './services/settings/SettingTab';
 import { DEFAULT_SETTINGS, NodusSettings } from './types';
+import i18n, { i18nReady } from './i18n';
 import { NodusView, VIEW_TYPE_NODUS } from './views/ItemView';
 
 export default class NodusPlugin extends Plugin {
 	settings: NodusSettings = DEFAULT_SETTINGS;
 
 	async onload() {
+		await i18nReady;
 		await this.loadSettings();
 
 		this.registerView(VIEW_TYPE_NODUS, (leaf) => new NodusView(leaf));
 
-		this.addRibbonIcon('bot', 'Open Nodus AI', () => {
+		this.addRibbonIcon('bot', i18n.t('plugin.openNodusAI'), () => {
 			void this.activateView();
 		});
 
 		this.addCommand({
 			id: 'open-view',
-			name: 'Open view',
+			name: i18n.t('plugin.openView'),
 			callback: () => {
 				void this.activateView();
 			},

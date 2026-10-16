@@ -1,3 +1,7 @@
+import { useTranslation } from 'react-i18next';
+
 export function ChatPage() {
-	return <h4>Chat</h4>;
+	const { t } = useTranslation();
+
+	return <h4>{t('pages.chat.title')}</h4>;
 }
