@@ -1,3 +1,7 @@
+import { useTranslation } from 'react-i18next';
+
 export function SettingsPage() {
-	return <h4>Settings</h4>;
+	const { t } = useTranslation();
+
+	return <h4>{t('pages.settings.title')}</h4>;
 }

@@ -2,6 +2,7 @@ import { ItemView, WorkspaceLeaf } from 'obsidian';
 import { createElement, StrictMode } from 'react';
 import { createRoot, Root } from 'react-dom/client';
 import { App } from '../ui/App';
+import i18n from '../i18n';
 
 export const VIEW_TYPE_NODUS = 'nodus-ai-view';
 
@@ -17,7 +18,7 @@ export class NodusView extends ItemView {
 	}
 
 	getDisplayText(): string {
-		return 'Nodus AI';
+		return i18n.t('view.displayName');
 	}
 
 	getIcon(): string {
