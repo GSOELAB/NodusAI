@@ -5,7 +5,11 @@ AI-ассистент для Obsidian: плагин с React-интерфейс�
 
 ## Стек
 
-TypeScript, React, React Router (MemoryRouter), Zustand, Zod, Vercel AI SDK, esbuild с CSS Modules.
+TypeScript, React, React Router (MemoryRouter), i18next, Zustand, Zod, Vercel AI SDK, esbuild с CSS Modules.
+
+## Локализация
+
+Интерфейс поддерживает русский и английский языки. Язык определяется по `getLanguage from obsidian`; если перевод недоступен, используется английский. JSON-переводы находятся в `src/i18n/locales`, настройка i18next — в `src/i18n/index.ts`.
 
 ## Dev-сборка
 
@@ -43,6 +47,7 @@ ln -s "$(pwd)" /path/to/dev-vault/.obsidian/plugins/nodus-ai
 src/
   main.ts          класс плагина, только регистрация
   types.ts         настройки и DEFAULT_SETTINGS
+  i18n/            настройка i18next и JSON-переводы
   views/           ItemView, монтирует React
   ui/              App.tsx, pages/, components/
   services/        ai/, vault/, settings/
