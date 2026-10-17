@@ -1,0 +1,191 @@
+.page {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-3);
+}
+
+.header,
+.actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--size-4-2);
+}
+
+.header h1,
+.page h1,
+.projectCard h2 {
+	margin: 0;
+}
+
+.primaryButton,
+.secondaryButton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: var(--size-4-2) var(--size-4-3);
+	border-radius: var(--radius-s);
+	font: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.primaryButton {
+	border: 1px solid var(--interactive-accent);
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+}
+
+.primaryButton:disabled {
+	opacity: 0.6;
+	cursor: wait;
+}
+
+.secondaryButton {
+	border: 1px solid var(--background-modifier-border);
+	color: var(--text-normal);
+}
+
+.dangerButton {
+	align-self: flex-start;
+	padding: var(--size-4-2) var(--size-4-3);
+	border: 1px solid var(--text-error);
+	border-radius: var(--radius-s);
+	background: transparent;
+	color: var(--text-error);
+	font: inherit;
+	cursor: pointer;
+}
+
+.dangerButton:disabled {
+	opacity: 0.6;
+	cursor: wait;
+}
+
+.projectActions {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--size-4-2);
+}
+
+.form,
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-2);
+}
+
+.subjects {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-2);
+	padding: var(--size-4-2);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-s);
+}
+
+.subjects summary {
+	cursor: pointer;
+	font-weight: var(--font-medium);
+}
+
+.subjectForm {
+	display: flex;
+	align-items: center;
+	gap: var(--size-4-2);
+}
+
+.subjectInput {
+	min-width: 0;
+	flex: 1;
+	padding: var(--size-4-2);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-s);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font: inherit;
+}
+
+.subjectList {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-2);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.subjectItem {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--size-4-2);
+}
+
+.subjectRemove {
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: var(--text-muted);
+	font: inherit;
+	cursor: pointer;
+}
+
+.field input,
+.field textarea {
+	width: 100%;
+	padding: var(--size-4-2);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-s);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font: inherit;
+}
+
+.helpText {
+	color: var(--text-muted);
+	font-size: var(--font-smaller);
+}
+
+.projectList {
+	display: grid;
+	gap: var(--size-4-2);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.projectCard {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: var(--size-4-2);
+	padding: var(--size-4-3);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-m);
+}
+
+.projectDetails {
+	display: flex;
+	min-width: 0;
+	flex-direction: column;
+	gap: var(--size-4-2);
+}
+
+.projectCard p,
+.empty {
+	margin: 0;
+	color: var(--text-muted);
+	white-space: pre-wrap;
+}
+
+.projectCard time {
+	color: var(--text-faint);
+	font-size: var(--font-smaller);
+}
+
+.error {
+	margin: 0;
+	color: var(--text-error);
+}

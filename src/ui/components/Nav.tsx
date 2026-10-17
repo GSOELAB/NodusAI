@@ -7,8 +7,8 @@ export function Nav() {
 
 	return (
 		<nav className={styles.nav}>
+			<NavLink to="/projects">{t('navigation.projects')}</NavLink>
 			<NavLink to="/chat">{t('navigation.chat')}</NavLink>
-			<NavLink to="/settings">{t('navigation.settings')}</NavLink>
 		</nav>
 	);
 }

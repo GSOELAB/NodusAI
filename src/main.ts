@@ -1,17 +1,24 @@
 import { Plugin, WorkspaceLeaf } from 'obsidian';
-import { NodusSettingTab } from './services/settings/SettingTab';
-import { DEFAULT_SETTINGS, NodusSettings } from './types';
 import i18n, { i18nReady } from './i18n';
 import { NodusView, VIEW_TYPE_NODUS } from './views/ItemView';
+import { ProjectStorage } from './services/projects/ProjectStorage';
 
 export default class NodusPlugin extends Plugin {
-	settings: NodusSettings = DEFAULT_SETTINGS;
-
 	async onload() {
 		await i18nReady;
-		await this.loadSettings();
 
-		this.registerView(VIEW_TYPE_NODUS, (leaf) => new NodusView(leaf));
+		this.registerView(
+			VIEW_TYPE_NODUS,
+			(leaf) =>
+				new NodusView(
+					leaf,
+					new ProjectStorage(
+						this.app.vault.adapter,
+						this.app.secretStorage,
+						`${this.app.vault.configDir}/plugins/${this.manifest.id}/projects`,
+					),
+				),
+		);
 
 		this.addRibbonIcon('bot', i18n.t('plugin.openNodusAI'), () => {
 			void this.activateView();
@@ -24,20 +31,6 @@ export default class NodusPlugin extends Plugin {
 				void this.activateView();
 			},
 		});
-
-		this.addSettingTab(new NodusSettingTab(this.app, this));
-	}
-
-	async loadSettings() {
-		this.settings = Object.assign(
-			{},
-			DEFAULT_SETTINGS,
-			(await this.loadData()) as Partial<NodusSettings> | null,
-		);
-	}
-
-	async saveSettings() {
-		await this.saveData(this.settings);
 	}
 
 	private async activateView() {

@@ -1,14 +1,51 @@
 {
 	"navigation": {
-		"chat": "Чат",
-		"settings": "Настройки"
+		"projects": "Проекты",
+		"chat": "Чат"
 	},
 	"pages": {
+		"projects": {
+			"title": "Проекты",
+			"add": "Добавить проект",
+			"loading": "Загрузка проектов…",
+			"loadError": "Не удалось загрузить проекты: {{error}}",
+			"loadProjectError": "Не удалось загрузить проект: {{error}}",
+			"empty": "Пока нет проектов. Создайте первый проект.",
+			"delete": "Удалить",
+			"deleting": "Удаление…",
+			"confirmDelete": "Удалить проект «{{name}}»? Это действие нельзя отменить.",
+			"confirmDeleteAction": "Подтвердить удаление",
+			"deleteError": "Не удалось удалить проект: {{error}}",
+			"createTitle": "Новый проект",
+			"edit": "Изменить",
+			"editTitle": "Редактировать проект",
+			"update": "Сохранить изменения",
+			"projectIdMissing": "Не указан идентификатор проекта.",
+			"projectNotFound": "Проект не найден.",
+			"name": "Название",
+			"description": "Описание",
+			"llmModel": "Модель LLM",
+			"llmModelHelp": "Введите идентификатор модели OpenRouter, например openai/gpt-4o-mini.",
+			"modelNotSet": "Не указана",
+			"subjects": "Предметы для заметок",
+			"subjectName": "Название предмета",
+			"subjectPlaceholder": "Например, маркетинг",
+			"addSubject": "Добавить предмет",
+			"removeSubject": "Удалить предмет «{{subject}}»",
+			"remove": "Удалить",
+			"noSubjects": "Предметы пока не добавлены.",
+			"apiKey": "API-ключ OpenRouter",
+			"apiKeyHelp": "Ключ хранится в защищённом хранилище Obsidian и не записывается в JSON проекта.",
+			"apiKeyEdit": "Новый API-ключ OpenRouter",
+			"apiKeyEditHelp": "Оставьте поле пустым, чтобы сохранить текущий ключ.",
+			"apiKeyRequired": "Введите непустой API-ключ OpenRouter.",
+			"cancel": "Отмена",
+			"save": "Создать проект",
+			"saving": "Сохранение…",
+			"saveError": "Не удалось сохранить проект: {{error}}"
+		},
 		"chat": {
 			"title": "Чат"
-		},
-		"settings": {
-			"title": "Настройки"
 		}
 	},
 	"plugin": {

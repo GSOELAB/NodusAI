@@ -1,14 +1,51 @@
 {
 	"navigation": {
-		"chat": "Chat",
-		"settings": "Settings"
+		"projects": "Projects",
+		"chat": "Chat"
 	},
 	"pages": {
+		"projects": {
+			"title": "Projects",
+			"add": "Add project",
+			"loading": "Loading projects…",
+			"loadError": "Unable to load projects: {{error}}",
+			"loadProjectError": "Unable to load project: {{error}}",
+			"empty": "There are no projects yet. Create your first project.",
+			"delete": "Delete",
+			"deleting": "Deleting…",
+			"confirmDelete": "Delete project “{{name}}”? This cannot be undone.",
+			"confirmDeleteAction": "Confirm delete",
+			"deleteError": "Unable to delete project: {{error}}",
+			"createTitle": "New project",
+			"edit": "Edit",
+			"editTitle": "Edit project",
+			"update": "Save changes",
+			"projectIdMissing": "Project ID was not provided.",
+			"projectNotFound": "Project not found.",
+			"name": "Name",
+			"description": "Description",
+			"llmModel": "LLM model",
+			"llmModelHelp": "Enter an OpenRouter model ID, for example openai/gpt-4o-mini.",
+			"modelNotSet": "Not set",
+			"subjects": "Note subjects",
+			"subjectName": "Subject name",
+			"subjectPlaceholder": "e.g. Marketing",
+			"addSubject": "Add subject",
+			"removeSubject": "Remove {{subject}}",
+			"remove": "Remove",
+			"noSubjects": "No subjects added yet.",
+			"apiKey": "OpenRouter API key",
+			"apiKeyHelp": "The key is stored in Obsidian SecretStorage and is not written to the project JSON.",
+			"apiKeyEdit": "New OpenRouter API key",
+			"apiKeyEditHelp": "Leave blank to keep the current key.",
+			"apiKeyRequired": "Enter a non-empty OpenRouter API key.",
+			"cancel": "Cancel",
+			"save": "Create project",
+			"saving": "Saving…",
+			"saveError": "Unable to save project: {{error}}"
+		},
 		"chat": {
 			"title": "Chat"
-		},
-		"settings": {
-			"title": "Settings"
 		}
 	},
 	"plugin": {

@@ -3,13 +3,17 @@ import { createElement, StrictMode } from 'react';
 import { createRoot, Root } from 'react-dom/client';
 import { App } from '../ui/App';
 import i18n from '../i18n';
+import { ProjectStorage } from '../services/projects/ProjectStorage';
 
 export const VIEW_TYPE_NODUS = 'nodus-ai-view';
 
 export class NodusView extends ItemView {
 	private root: Root | null = null;
 
-	constructor(leaf: WorkspaceLeaf) {
+	constructor(
+		leaf: WorkspaceLeaf,
+		private readonly projectStorage: ProjectStorage,
+	) {
 		super(leaf);
 	}
 
@@ -27,7 +31,13 @@ export class NodusView extends ItemView {
 
 	async onOpen(): Promise<void> {
 		this.root = createRoot(this.contentEl);
-		this.root.render(createElement(StrictMode, null, createElement(App)));
+		this.root.render(
+			createElement(
+				StrictMode,
+				null,
+				createElement(App, { projectStorage: this.projectStorage }),
+			),
+		);
 	}
 
 	async onClose(): Promise<void> {
